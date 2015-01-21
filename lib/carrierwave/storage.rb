@@ -2,8 +2,6 @@ require "carrierwave/storage/abstract"
 require "carrierwave/storage/file"
 
 begin
-  require "fog"
+  require "carrierwave/storage/fog"
 rescue LoadError
 end
-
-require "carrierwave/storage/fog" if defined?(Fog)
